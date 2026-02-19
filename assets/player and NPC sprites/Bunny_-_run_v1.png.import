@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg5k4beb7u04i"
-path="res://.godot/imported/Bunny_-_run_v1.png-865058037f211912af5a80861a0c4464.ctex"
+path="res://.godot/imported/Bunny_-_run_v1.png-58a9afccfdaed0885bd115949d5b0681.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bunny_-_run_v1.png"
-dest_files=["res://.godot/imported/Bunny_-_run_v1.png-865058037f211912af5a80861a0c4464.ctex"]
+source_file="res://assets/player and NPC sprites/Bunny_-_run_v1.png"
+dest_files=["res://.godot/imported/Bunny_-_run_v1.png-58a9afccfdaed0885bd115949d5b0681.ctex"]
 
 [params]
 

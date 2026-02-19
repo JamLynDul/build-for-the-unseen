@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cad44ru028mux" path="res://scripts/friend_one.gd" id="1_juics"]
 
-[node name="Friend One" type="Area2D" unique_id=191015253]
+[node name="Friend Pickup" type="Area2D" unique_id=191015253]
 z_index = 1
 collision_mask = 2
 script = ExtResource("1_juics")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfrv7hm4lrq50"
-path="res://.godot/imported/Bunny-_idle_V1.png-a98b7c85a95a0d9bb7b285c39362d72a.ctex"
+uid="uid://dd46tjicqfyes"
+path="res://.godot/imported/background_V1.png-7f6cd382f04b1c5c3290b73f314df09f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bunny-_idle_V1.png"
-dest_files=["res://.godot/imported/Bunny-_idle_V1.png-a98b7c85a95a0d9bb7b285c39362d72a.ctex"]
+source_file="res://assets/platforms and backgrounds/background_V1.png"
+dest_files=["res://.godot/imported/background_V1.png-7f6cd382f04b1c5c3290b73f314df09f.ctex"]
 
 [params]
 

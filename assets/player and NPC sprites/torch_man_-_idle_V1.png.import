@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxum7rkliswt2"
-path="res://.godot/imported/torch_man_-_idle_V1.png-e524ab83b790ff66a42fbec51db77ed7.ctex"
+path="res://.godot/imported/torch_man_-_idle_V1.png-62cefaa5ab690f79221aba137e4402cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/torch_man_-_idle_V1.png"
-dest_files=["res://.godot/imported/torch_man_-_idle_V1.png-e524ab83b790ff66a42fbec51db77ed7.ctex"]
+source_file="res://assets/player and NPC sprites/torch_man_-_idle_V1.png"
+dest_files=["res://.godot/imported/torch_man_-_idle_V1.png-62cefaa5ab690f79221aba137e4402cc.ctex"]
 
 [params]
 

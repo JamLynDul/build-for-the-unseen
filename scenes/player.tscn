@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://blkiiicsbkxg3"]
 
 [ext_resource type="Script" uid="uid://om223cgmopad" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dg5k4beb7u04i" path="res://assets/Bunny_-_run_v1.png" id="3_dqkch"]
-[ext_resource type="Texture2D" uid="uid://dfrv7hm4lrq50" path="res://assets/Bunny-_idle_V1.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dg5k4beb7u04i" path="res://assets/player and NPC sprites/Bunny_-_run_v1.png" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://dfrv7hm4lrq50" path="res://assets/player and NPC sprites/Bunny-_idle_V1.png" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("3_qhqgy")
@@ -236,7 +236,7 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1163497769]
 sprite_frames = SubResource("SpriteFrames_smehm")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=351085339]
