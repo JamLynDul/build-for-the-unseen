@@ -52,6 +52,7 @@ animations = [{
 [node name="fireball" type="Node2D" unique_id=221201566]
 
 [node name="kill_zone" parent="." unique_id=2071582815 instance=ExtResource("2_1gl40")]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kill_zone" unique_id=226501549]
 position = Vector2(1, -7)

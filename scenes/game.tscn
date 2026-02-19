@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cvf06jgyintpi" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://blkiiicsbkxg3" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://rixv3qtwjv8k" path="res://scenes/kill_zone.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://0atiqbk52py8" path="res://scenes/fireball.tscn" id="4_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ec0q0jf35r5c" path="res://scenes/platform.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://18c8ufuom74j" path="res://scenes/friend_pickup.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cxum7rkliswt2" path="res://assets/player and NPC sprites/torch_man_-_idle_V1.png" id="4_p57ef"]
@@ -12,6 +13,44 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lbhrr"]
 normal = Vector2(0, 1)
 distance = 1.0
+
+[sub_resource type="Animation" id="Animation_0tnpc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../fireball:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(38, 23)]
+}
+
+[sub_resource type="Animation" id="Animation_kvpfn"]
+resource_name = "shoot fire"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../fireball:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(38, 23), Vector2(-19, 47), Vector2(-19, 47)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dinhu"]
+_data = {
+&"RESET": SubResource("Animation_0tnpc"),
+&"shoot fire": SubResource("Animation_kvpfn")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
 atlas = ExtResource("4_p57ef")
@@ -578,6 +617,14 @@ shape = SubResource("WorldBoundaryShape2D_lbhrr")
 [node name="Friend One" parent="Friends" unique_id=191015253 instance=ExtResource("4_lbhrr")]
 position = Vector2(160, -5)
 
+[node name="fireball" parent="Friends/Friend One" unique_id=221201566 instance=ExtResource("4_0tnpc")]
+position = Vector2(38, 23)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Friends/Friend One/fireball" unique_id=1584459890]
+root_node = NodePath("../../AnimatedSprite2D")
+libraries/ = SubResource("AnimationLibrary_dinhu")
+autoplay = &"shoot fire"
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Friends/Friend One" unique_id=1094696697]
 position = Vector2(38, 23)
 sprite_frames = SubResource("SpriteFrames_dinhu")
@@ -588,8 +635,10 @@ position = Vector2(41, 24)
 shape = SubResource("RectangleShape2D_kvuet")
 
 [node name="Label" type="Label" parent="Friends/Friend One" unique_id=1900174462]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -4.0
+offset_top = -10.0
+offset_right = 36.0
+offset_bottom = 13.0
 text = "hi."
 
 [node name="Friend Two" parent="Friends" unique_id=1070344453 instance=ExtResource("4_lbhrr")]
