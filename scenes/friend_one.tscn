@@ -51,6 +51,7 @@ size = Vector2(17, 42)
 
 [node name="Friend One" type="Area2D" unique_id=191015253]
 z_index = 1
+collision_mask = 2
 script = ExtResource("1_juics")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=333292411]
