@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://t3kikmgtm33p"]
+
+[ext_resource type="Script" uid="uid://dmq3b2fjkwaor" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://cknvkhfdvhmyj" path="res://assets/pictures/Screenshot 2026-02-19 154318.png" id="1_l6cm7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vue75"]
+texture = ExtResource("1_l6cm7")
+modulate_color = Color(1.4369954, 1.4369954, 1.4369954, 0.3764706)
+
+[node name="Main Menu" type="Control" unique_id=1187904553]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekxnf")
+
+[node name="Panel" type="Panel" parent="." unique_id=1775289311]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vue75")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=37492471]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -86.0
+offset_right = 103.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=298108601]
+clip_contents = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "START"
+
+[node name="Credits" type="Button" parent="VBoxContainer" unique_id=1390123310]
+clip_contents = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "CREDITS"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=2133227408]
+clip_contents = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="build_for_the_unseen"
-run/main_scene="uid://blyrasaosydvv"
+run/main_scene="uid://t3kikmgtm33p"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
