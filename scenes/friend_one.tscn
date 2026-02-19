@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dgm1876jbu2ai"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twaon"]
+
+[node name="Flame Head" type="AnimatedSprite2D" unique_id=420475599]
+sprite_frames = SubResource("SpriteFrames_twaon")
