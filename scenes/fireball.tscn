@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://0atiqbk52py8"]
+
+[ext_resource type="Texture2D" uid="uid://bhe22hmd20ycx" path="res://assets/player and NPC sprites/fire V1.png" id="1_3s14c"]
+[ext_resource type="PackedScene" uid="uid://rixv3qtwjv8k" path="res://scenes/kill_zone.tscn" id="2_1gl40"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qaphm"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gl40"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(0, 0, 34, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb14k"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(34, 0, 34, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kba2"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(68, 0, 34, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43lgj"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(0, 44, 34, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqoxj"]
+atlas = ExtResource("1_3s14c")
+region = Rect2(34, 44, 34, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86oub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gl40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb14k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kba2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43lgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqoxj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="fireball" type="Node2D" unique_id=221201566]
+
+[node name="kill_zone" parent="." unique_id=2071582815 instance=ExtResource("2_1gl40")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill_zone" unique_id=226501549]
+position = Vector2(1, -7)
+rotation = 0.017150227
+shape = SubResource("CircleShape2D_qaphm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=126441120]
+sprite_frames = SubResource("SpriteFrames_86oub")
+frame_progress = 0.23407054
