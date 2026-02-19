@@ -720,6 +720,11 @@ autoplay = "default"
 position = Vector2(41, 24)
 shape = SubResource("RectangleShape2D_kvuet")
 
+[node name="Label" type="Label" parent="Friends/Friend One" unique_id=1900174462]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "hi."
+
 [node name="Friend Two" parent="Friends" unique_id=1070344453 instance=ExtResource("4_lbhrr")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Friends/Friend Two" unique_id=643146374]
@@ -733,6 +738,13 @@ frame_progress = 0.40418354
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Friends/Friend Two" unique_id=941476222]
 position = Vector2(279.25, -25.75)
 shape = SubResource("RectangleShape2D_1kice")
+
+[node name="Label" type="Label" parent="Friends/Friend Two/CollisionShape2D" unique_id=1391528822]
+offset_left = 21.75
+offset_top = -17.25
+offset_right = 60.75
+offset_bottom = 5.75
+text = "Hiya!"
 
 [node name="Platforms" type="Node" parent="." unique_id=344273886]
 
